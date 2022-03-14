@@ -1,0 +1,15 @@
+{
+  "timeZone": "America/Sao_Paulo",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "dataStudio": {
+    "name": "Piperun",
+    "company": "Diego Gasques",
+    "companyUrl": "https://crmpiperun.com/",
+    "logoUrl": "https://crmpiperun.com/wp-content/uploads/elementor/thumbs/piperun-sistema-crm-vendas-peexaothzadrb3u2cw2tvigpm7onv4070bbg4sl6gw.png",
+    "addOnUrl": "https://github.com/DiegoMGasques/crmpiperun-gds-connector/tree/main",
+    "supportUrl": "https://github.com/DiegoMGasques/crmpiperun-gds-connector/tree/main",
+    "description": "The Piperun data connector"
+  }
+}
