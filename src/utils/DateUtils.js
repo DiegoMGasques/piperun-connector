@@ -1,5 +1,24 @@
 function DateUtils() {}
 
+DateUtils.getDateString = function(windowCode) {
+  var windowMapping = {
+    0: 7,
+    1: 30,
+    2: 90,
+    3: 180,
+    4: 365,
+  };
+
+  var lastDays = 0;
+  if (windowCode !== undefined) {
+    lastDays = windowMapping[windowCode] || 0;
+  }
+
+  return new Date(Date.now() - lastDays * 24 * 60 * 60 * 1000)
+    .toISOString()
+    .split("T")[0];
+};
+
 DateUtils.formatDateResponse = function(resDate) {
   if (typeof resDate !== "string") return resDate;
 

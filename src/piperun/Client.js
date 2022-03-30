@@ -5,6 +5,7 @@ var initial = {
     order: [],
     status: [],
     probability: [],
+    lost_reason_name: [],
     reason_close: [],
     temperature: [],
     deleted: [],
@@ -98,8 +99,8 @@ Piperun.prototype.isTokenValid = function(token) {
 
 Piperun.prototype.updatedAt = function(range) {
   this.url.filter({
-    updated_at_start: range.start || getDateString(1),
-    updated_at_end: range.end || getDateString(),
+    updated_at_start: range.start || DateUtils.getDateString(1),
+    updated_at_end: range.end || DateUtils.getDateString(),
   });
 
   return this;
@@ -194,6 +195,9 @@ Piperun.prototype.fillDataBuffer = function(table, record) {
     deals.status.push(DataBuilder.parseStatus(record.status));
     deals.probability.push(DataBuilder.parsePercent(record.probability));
     deals.reason_close.push(record.reason_close);
+    deals.lost_reason_name.push(
+      record.lostReason ? record.lostReason.name : null
+    );
     deals.temperature.push(record.temperature);
     deals.deleted.push(!!record.deleted);
     deals.freezed.push(!!record.freezed);
