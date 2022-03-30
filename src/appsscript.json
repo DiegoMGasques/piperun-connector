@@ -4,12 +4,14 @@
   "exceptionLogging": "STACKDRIVER",
   "runtimeVersion": "V8",
   "dataStudio": {
-    "name": "Piperun",
-    "company": "Diego Gasques",
+    "name": "Piperun Data Report",
+    "company": "Piperun",
     "companyUrl": "https://crmpiperun.com/",
     "logoUrl": "https://crmpiperun.com/wp-content/uploads/elementor/thumbs/piperun-sistema-crm-vendas-peexaothzadrb3u2cw2tvigpm7onv4070bbg4sl6gw.png",
-    "addOnUrl": "https://github.com/DiegoMGasques/crmpiperun-gds-connector/tree/main",
-    "supportUrl": "https://github.com/DiegoMGasques/crmpiperun-gds-connector/tree/main",
-    "description": "The Piperun data connector"
+    "description": "The Piperun data connector",
+    "addonUrl": "https://crmpiperun.com/",
+    "supportUrl": "https://crmpiperun.com/",
+    "authType": ["NONE"],
+    "feeType": ["FREE"]
   }
 }

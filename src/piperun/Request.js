@@ -2,7 +2,7 @@ function Request(rateLimit) {
   this.rateLimit = Object.assign(
     {},
     {
-      apiCalls: 115,
+      apiCalls: 120,
       per: 15500,
     },
     rateLimit || {}
@@ -73,11 +73,9 @@ Request.prototype.updateRateLimit = function(numOfRequests) {
 
 Request.prototype.get = function(url, options) {
   this.checkForRequestsLimit();
-  console.log("Request limit checked");
   var res = UrlFetchApp.fetch(url, options);
   var data = JSON.parse(res.getContentText()); // JSON.parse?
   this.updateRateLimit(1);
-
   return data;
 };
 
@@ -97,6 +95,5 @@ Request.prototype.batch = function(queue) {
       return acc;
     }
   }, []);
-
   return { data: data, queue: failedRequests.concat(queue) };
 };

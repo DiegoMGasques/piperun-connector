@@ -95,6 +95,5 @@ Url.prototype.build = function() {
   params.push("show=" + show);
 
   var url = this.BASE_URL + path + "?" + params.join("&");
-  console.log(url);
   return url;
 };

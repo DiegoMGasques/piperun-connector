@@ -62,7 +62,6 @@ DataCache.prototype.set = function(prefix, value) {
 
   for (var i = 0; i < chunks.length; i++) {
     var chunkKey = this.buildChunkKey(prefix, i);
-    console.log("Cache key: ", chunkKey);
     this.service.put(chunkKey, chunks[i], DataCache.REQUEST_CACHING_TIME);
   }
 };
